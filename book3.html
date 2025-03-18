@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="strip.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+       
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            position: relative;
+            background-color: #2980b9;
+        }
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        
+        body{
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+        }
+        
+        header, main, footer {
+            width: 100%;
+            text-align: center;
+        }
+        
+        /* Home button container */
+        .home-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+        
+        .home-button a {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            position: static; 
+            transform: none; 
+        }
+        
+        .home-button a:hover {
+            background-color: #2980b9;
+        }
+        
+        .art {
+            color: black; /* Changed from white to be visible */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .art img {
+            max-width: 300px;
+            height: auto;
+            margin: 10px 0;
+        }
+        
+        details {
+            width: 100%;
+            margin-bottom: 15px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+            padding: 8px;
+            background-color: #eaeaea;
+            border-radius: 3px;
+        }
+        
+        ul, ol {
+            text-align: left;
+            padding-left: 30px;
+        }
+        
+        .product-details {
+            text-align: left;
+        }
+        
+        blockquote {
+            font-style: italic;
+            border-left: 3px solid #ccc;
+            padding-left: 15px;
+            margin-left: 0;
+            text-align: left;
+        }
+        
+        /* Purchase links */
+        details a {
+            position: static;
+            display: inline;
+            background-color: transparent;
+            color: #0066cc;
+            padding: 0;
+            border-radius: 0;
+            font-weight: normal;
+            box-shadow: none;
+            transform: none;
+        }
+        
+        details a:hover {
+            text-decoration: underline;
+            background-color: transparent;
+        }
+        
+        /* Feedback form styles */
+        .feedback-form {
+            width: 100%;
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f0f8ff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .feedback-form h3 {
+            margin-top: 0;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        
+        .rating-stars {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="home-button">
+        <a href="index.html"><i class="bi bi-house-door"></i> Home</a>
+    </div>
+
+    <header>
+       <h1>Book Showcase : Book 3 Details</h1>
+    </header>
+
+    <main>
+        <div class="art">
+            <h2>Book 3 :Dark Psychology Secrets & Manipulation</h2>
+            <img src="/public/image/imgbbok3.jpg" alt="Dark Psychology Secrets & Manipulation">
+        </div>
+
+        <details>
+            <summary>
+                GENRE
+            </summary>
+            <ul>
+                <li>Dark Psychology</li>
+                <li>Personal Development</li>
+                <li>Mind Control</li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>
+                Table of Contents
+            </summary>
+            <ul>
+                <li>Understanding Manipulation: The Basics</li>
+                <li>The Psychology of Persuasion</li>
+                <li>Recognizing Manipulative Behaviors
+                </li>
+                <li>The Power of Words and Body Language</li>
+                <li>Techniques for Manipulating Others</li>
+                <li>Psychological Tactics in Relationships</li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>
+              About the Author
+            </summary>
+            <ul>
+                <li>
+                    <h4>   Amy Brown</h4>
+                    <blockquote>
+                        Amy Brown is an author and expert in psychology, particularly focused on dark psychology and manipulation. She writes books aimed at helping readers understand psychological tactics, such as manipulation and persuasion, used in personal and professional settings. Her work provides insights into human behavior, helping individuals recognize and protect themselves from psychological influence. Amy Brown's practical advice and teachings are designed to empower readers to navigate the complexities of human interactions with greater awareness and confidence.
+                    </blockquote>
+                </li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>
+                Overview
+            </summary>
+            <ul>
+                <li>Key strategies of psychological manipulation</li>
+                <li>How to identify manipulative behaviors</li>
+                <li>Ways to protect yourself from psychological control</li>
+                <li>The ethical considerations of using such knowledge</li>
+            </ul>
+        </details>
+        
+        <details>
+            <summary>
+                Product Details
+            </summary>
+            <ul>
+                <div class="product-details">
+                    <p><strong>Publisher:</strong> Pharos Books; First Edition (30 March 2022)</p>
+                    <p><strong>Language:</strong> English</p>
+                    <p><strong>Paperback:</strong> 176 pages</p>
+                    <p><strong>ISBN-10:</strong> 935546133X</p>
+                    <p><strong>ISBN-13:</strong> 978-9355461339</p>
+                    <p><strong>Reading age:</strong> Customer suggested age: 16 years and up</p>
+                    <p><strong>Item Weight:</strong> 430 g</p>
+                    <p><strong>Dimensions:</strong> 21.59 x 13.97 x 0.64 cm</p>
+                    <p><strong>Best Sellers Rank:</strong> #307 in Books (See Top 100 in Books)</p>
+                    <p><strong>#1 in Developmental Psychology (Books)</strong></p>
+                    <p><strong>#65 in Self-Help</strong></p>
+                    <p><strong>Customer Reviews:</strong> 4.2 out of 5 stars (812 ratings)</p>
+                </div>
+                
+            </ul>
+        </details>
+
+        <details>
+            <summary>
+                Purchase link
+            </summary>
+            <ul>
+                <li><a href="https://www.amazon.in/Dark-Psychology-Secrets-Manipulation-Brown/dp/935546133X/ref=sr_1_1_sspa?crid=2XX60EWMAC6Q6&dib=eyJ2IjoiMSJ9.Sb4Ey-pi050hGaSjOPhtGHlKwAML2EqGrsQwqf5Cuh45yP24_S5aWFNAW4FLgEwM8KzYO9gdwIUgytajee6DcRkfKBcdtmw1bQ9CCDN0w7g9cSZZd9aY_E1tkB_Vv9Vs3DuOBU4VC_Gy0tJ8iuzglHUG9ntQs9v0qT9xHAdby0a2lOgE2iXrtDfqttXhUU3N_BPbVYRHpPiCyYdp9CsmAxT4YHiioBBfUI-FSOfdVXg.M5Zi6ixlz4UMov218eAuT4T4ZohvXCA0fQ0WGNHA1oc&dib_tag=se&keywords=dark+psychology+and+manipulation&qid=1742119530&s=books&sprefix=dark+psy%2Cstripbooks%2C237&sr=1-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1" target="_blank">Amazon Kindle - ₹192</a></li>
+                
+                <li><a href="https://play.google.com/store/audiobooks/details/Amy_Brown_Dark_Psychology_Secrets_And_Manipulation?id=AQAAAEAKhHjEYM&hl=en" target="_blank">Google Play Books - ₹88.50(Audio book)</a></li>
+            </ul>
+        </details>
+
+        <!-- Feedback Form Section -->
+        <section class="feedback-form">
+            <h3>Share Your Feedback</h3>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="rating">Rating:</label>
+                    <select id="rating" name="rating" required>
+                        <option value="">Select a rating</option>
+                        <option value="5">5 - Excellent</option>
+                        <option value="4">4 - Very Good</option>
+                        <option value="3">3 - Good</option>
+                        <option value="2">2 - Fair</option>
+                        <option value="1">1 - Poor</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="feedback">Your Review:</label>
+                    <textarea id="feedback" name="feedback" required placeholder="Share your thoughts about the book..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="purchase">Where did you purchase this book?</label>
+                    <select id="purchase" name="purchase">
+                        <option value="">Select an option</option>
+                        <option value="amazon">Amazon</option>
+                       
+                        <option value="google">Google Play</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="submit-btn">Submit Feedback</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Book Showcase. All rights reserved.</p>
+    </footer>
+</body>
+</html>

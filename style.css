@@ -1,0 +1,186 @@
+body {
+    background: #edebeb;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.header {
+    background: #3f5d7a;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+nav {
+    background-color: #34495e;
+    padding: 15px 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+main{
+    background: linear-gradient(135deg, #3498db, #2ecc71);
+    padding: 50px ;
+    text-align: center;
+}
+
+.home {
+    float: right;
+    color: white;
+    background-color: #3498db;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.home:hover {
+    background-color: #2980b9;
+    text-decoration: none;
+}
+
+.explore {
+    padding-top: 25px;
+    font-size: 28px;
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+.outerdiv {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.bookimage {
+    margin: 20px;
+    position: relative;
+    perspective: 1000px;
+    width: 200px;
+    text-align: center;
+}
+
+.outerdiv img {
+    height: 300px;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+
+.book-title {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    display: none;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #2980b9;
+}
+
+.backtext {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotateY(360deg);
+    backface-visibility: hidden;
+    transition: 0.8s;
+}
+
+img {
+    backface-visibility: hidden;
+    transition: 0.8s;
+}
+
+.bookimage:hover .backtext {
+    transform: rotateY(360deg);
+    transition: 0.8s;
+}
+
+.bookimage:hover a {
+    display: block;
+}
+
+.bookimage:hover img {
+    transform: rotateY(180deg);
+    opacity: 0.3;
+    transition: 0.8s;
+}
+
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .outerdiv {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .bookimage {
+        margin: 20px 0;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+    }
+}
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+main {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}

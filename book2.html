@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="strip.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            position: relative; /* For absolute positioning context */
+            background-color: #2980b9;
+        }
+        
+        header, main, footer {
+            width: 100%;
+            text-align: center;
+        }
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        
+        body {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+        }
+        
+        
+        
+        
+        /* Home button container */
+        .home-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+        
+        .home-button a {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            position: static; 
+            transform: none; 
+        }
+        
+        .home-button a:hover {
+            background-color: #2980b9;
+        }
+        
+        .art {
+            color: black; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .art img {
+            max-width: 300px;
+            height: auto;
+            margin: 10px 0;
+        }
+        
+        details {
+            width: 100%;
+            margin-bottom: 15px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+            padding: 8px;
+            background-color: #eaeaea;
+            border-radius: 3px;
+        }
+        
+        ul, ol {
+            text-align: left;
+            padding-left: 30px;
+        }
+        
+        .product-details {
+            text-align: left;
+        }
+        
+        blockquote {
+            font-style: italic;
+            border-left: 3px solid #ccc;
+            padding-left: 15px;
+            margin-left: 0;
+            text-align: left;
+        }
+        
+        /* Purchase links - */
+        details a {
+            position: static;
+            display: inline;
+            background-color: transparent;
+            color: #0066cc;
+            padding: 0;
+            border-radius: 0;
+            font-weight: normal;
+            box-shadow: none;
+            transform: none;
+        }
+        
+        details a:hover {
+            text-decoration: underline;
+            background-color: transparent;
+        }
+        
+        /* Feedback form styles */
+        .feedback-form {
+            width: 100%;
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f0f8ff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .feedback-form h3 {
+            margin-top: 0;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        
+        .rating-stars {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="home-button">
+        <a href="index.html"><i class="bi bi-house-door"></i> Home</a>
+    </div>
+
+    <header>
+       <h1>Book Showcase : Book 2 Details</h1>
+    </header>
+
+    <main>
+        <div class="art">
+            <h2>Book 2 :The Silent Patient </h2>
+            <img src="/public/image/imgbook2.webp" alt="The Silent Patient">
+        </div>
+
+        <details>
+            <summary>
+                GENRE
+            </summary>
+            <ul>
+                <li>Psychological thriller</li>
+                <li>Crime fiction</li>
+                <li>Mystery</li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>
+                Table of Contents
+            </summary>
+            <ul>
+                <li>Theo Faber</li>
+                <li>The Investigation</li>
+                <li>The Breakthrough</li>
+                <li>The Confession</li>
+                <li>The Real Story</li>
+                
+            </ul>
+        </details>
+
+        <details>
+            <summary>
+              About the Author
+            </summary>
+            <ul>
+                <li>
+                    <h4>Alex Michaelides</h4>
+                    <blockquote>
+                        Alex Michaelides was born and raised in Cyprus. He has an M.A. in English Literature from Trinity College, Cambridge University, and an M.A. in Screenwriting from the American Film Institute in Los Angeles. The Silent Patient was his first novel, debuting at #1 on the New York Times bestseller list, and has sold more than 6.5 million copies worldwide. The rights have been sold in a record-breaking 51 countries, and the book has been optioned for film by Plan B. His second novel, The Maidens, was an instant New York Times bestseller and has been optioned for television by Miramax Television and Stone Village.
+                    </blockquote>
+                </li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>
+                Overview
+            </summary>
+            <ul>
+                <li>Alicia Berenson, a famous painter, shoots her husband, Gabriel, and then stops speaking.</li>
+                <li>Theo Faber, a forensic psychologist, becomes obsessed with Alicia's case.</li>
+                <li>Theo is determined to figure out why Alicia shot her husband and why she refuses to speak.</li>
+                <li>The story builds up to a shocking twist at the end.</li>
+            </ul>
+        </details>
+        
+        <details>
+            <summary>
+                Product Details
+            </summary>
+            <ul>
+                <div class="product-details">
+                    <p><strong>ASIN:</strong> B0DYP67YM8</p>
+                    <p><strong>Publisher:</strong> USI (31 July 2023)</p>
+                    <p><strong>Paperback:</strong> 340 pages</p>
+                    <p><strong>Reading age:</strong> Customer suggested age: 16 years and up</p>
+                    <p><strong>Item Weight:</strong> 300 g</p>
+                    <p><strong>Dimensions:</strong> 10 x 10 x 10 cm</p>
+                    <p><strong>Country of Origin:</strong> USA</p>
+                    <p><strong>Importer:</strong> Alex</p>
+                    <p><strong>Packer:</strong> Alex</p>
+                    <p><strong>Generic Name:</strong> Books</p>
+                    <p><strong>Best Sellers Rank:</strong> #239 in Books (See Top 100 in Books)</p>
+                    <p><strong>#5 in Crime Fiction (Books)</strong></p>
+                    <p><strong>Customer Reviews:</strong> 4.5 out of 5 stars (348,552 ratings)</p>
+                </div>
+                
+            </ul>
+        </details>
+
+        <details>
+            <summary>
+                Purchase link
+            </summary>
+            <ul>
+                <ul>
+                    <li><a href="https://www.amazon.in/Silent-Patient-Alex-Michaelides-English/dp/B0DYP67YM8/ref=sr_1_1_sspa?dib=eyJ2IjoiMSJ9.oKoJGR51zYchblPnyi41qnOFpVjS0cyl6xK5SLyAKbJZOMNGejOrExLAsM0b7gd-kGCLr-T3uon5Owqt0SaB-MUVlG3hfDPNTSXSyAZzBIohKuWQMaxmNctclxDyxKfebh-bdOqGzgSKZFugZEdmFn526NQwyy21WoNtElzOB7qN5uYp2uoH74hsA3-CQc81xBueh9pgOillvhK0_ebJR4NPIRCkwXsOqdqMI9E9TB0.vWfrK4dBWcdfLJ3xRuw5Yl67lwNbwSmOi5UC6UE8BwA&dib_tag=se&keywords=the+silent+patient&qid=1742118371&s=books&sr=1-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1" target="_blank">Amazon Kindle - ₹249</a></li>
+                   
+                    <li><a href="https://play.google.com/store/books/details/Alex_Michaelides_The_Silent_Patient?id=mJ9mDwAAQBAJ" target="_blank">Google Play Books - ₹260.19(E-Book)</a></li>
+                </ul>
+                
+            </ul>
+            
+        </details>
+
+        <!--Feedback Form Section -->
+        <section class="feedback-form">
+            <h3>Share Your Feedback</h3>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="rating">Rating:</label>
+                    <select id="rating" name="rating" required>
+                        <option value="">Select a rating</option>
+                        <option value="5">5 - Excellent</option>
+                        <option value="4">4 - Very Good</option>
+                        <option value="3">3 - Good</option>
+                        <option value="2">2 - Fair</option>
+                        <option value="1">1 - Poor</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="feedback">Your Review:</label>
+                    <textarea id="feedback" name="feedback" required placeholder="Share your thoughts about the book..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="purchase">Where did you purchase this book?</label>
+                    <select id="purchase" name="purchase">
+                        <option value="">Select an option</option>
+                        <option value="amazon">Amazon</option>
+                       
+                        <option value="google">Google Play</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="submit-btn">Submit Feedback</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Book Showcase. All rights reserved.</p>
+    </footer>
+</body>
+</html>

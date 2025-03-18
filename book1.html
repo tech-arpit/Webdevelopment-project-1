@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="strip.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            position: relative; /*absolute positioning context */
+            
+        }
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        
+        body {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+        }
+        
+        header, main, footer {
+            width: 100%;
+            text-align: center;
+        }
+        .header{
+            width: 200%;
+            background-color: white;
+        }
+        
+        /* Home button container */
+        .home-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+            
+        }
+        
+        .home-button a {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            position: static; 
+            transform: none; 
+        }
+        
+        .home-button a:hover {
+            background-color: #2980b9;
+        }
+        
+        .art {
+            color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .art img {
+            max-width: 300px;
+            height: auto;
+            margin: 10px 0;
+        }
+        
+        details {
+            width: 100%;
+            margin-bottom: 15px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+            padding: 8px;
+            background-color: #eaeaea;
+            border-radius: 3px;
+        }
+        
+        ul, ol {
+            text-align: left;
+            padding-left: 30px;
+        }
+        
+        .product-details {
+            text-align: left;
+        }
+        
+        blockquote {
+            font-style: italic;
+            border-left: 3px solid #ccc;
+            padding-left: 15px;
+            margin-left: 0;
+            text-align: left;
+        }
+        
+        /* Purchase links - */
+        details a {
+            position: static;
+            display: inline;
+            background-color: transparent;
+            color: #0066cc;
+            padding: 0;
+            border-radius: 0;
+            font-weight: normal;
+            box-shadow: none;
+            transform: none;
+        }
+        
+        details a:hover {
+            text-decoration: underline;
+            background-color: transparent;
+        }
+        
+        /* Feedback form styles */
+        .feedback-form {
+            width: 100%;
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f0f8ff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .feedback-form h3 {
+            margin-top: 0;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        
+        .rating-stars {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Welcome to Book Showcase</h1>
+    </header>
+    <div class="home-button">
+        <a href="index.html"><i class="bi bi-house-door"></i> Home</a>
+    </div>
+
+    <header>
+       <h1>Book Showcase : Book 1 Details</h1>
+    </header>
+
+    <main>
+        <div class="art">
+            <h2>Book 1 :Computer Hacking Beginners Guide</h2>
+            <img src="/public/image/imgbook1.jpg" alt="Computer Hacking Beginners Guide book cover">
+        </div>
+
+        <details>
+            <summary>
+                GENRE
+            </summary>
+            <ul>
+                <li>Technology</li>
+                <li>Education</li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>
+                Table of Contents
+            </summary>
+            <ul>
+                <li>Introduction to Computer Hacking</li>
+                <li>Basic Computer Networking Concepts</li>
+                <li>Common Vulnerabilities and Exploits</li>
+                <li>Ethical Hacking Principles</li>
+                <li>Security Tools and Techniques</li>
+                <li>Protecting Your Digital Identity</li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>
+              About the Author
+            </summary>
+            <ul>
+                <li>
+                    <h4>Alan T. Norman</h4>
+                    <blockquote>
+                        Alan T. Norman is a proud, savvy, and ethical hacker from San Francisco City. After receiving a Bachelors of Science at Stanford University. Alan now works for a mid-size Informational Technology Firm in the heart of SFC. He aspires to work for the United States government as a security hacker, but also loves teaching others about the future of technology. Alan firmly believes that the future will heavily rely on computer "geeks" for both security and the successes of companies and future jobs alike. In his spare time, he loves to analyze and scrutinize everything about the game of basketball.
+                    </blockquote>
+                </li>
+            </ul>
+        </details>
+
+        <details>
+            <summary>
+                Overview
+            </summary>
+            <ul>
+                <li>A comprehensive guide for beginners to understand computer hacking</li>
+                <li>Learn ethical hacking techniques and cybersecurity fundamentals</li>
+                <li>Practical examples and step-by-step instructions</li>
+                <li>Perfect for aspiring cybersecurity professionals</li>
+            </ul>
+        </details>
+        
+        <details>
+            <summary>
+                Product Details
+            </summary>
+            <ul>
+                <div class="product-details">
+                    <p><strong>ASIN:</strong> B01N4FFHMW</p>
+                    <p><strong>Language:</strong> English</p>
+                    <p><strong>File size:</strong> 3.0 MB</p>
+                    <p><strong>Simultaneous device usage:</strong> Unlimited</p>
+                    <p><strong>Text-to-Speech:</strong> Enabled</p>
+                    <p><strong>Screen Reader:</strong> Supported</p>
+                    <p><strong>Enhanced typesetting:</strong> Enabled</p>
+                    <p><strong>X-Ray:</strong> Not Enabled</p>
+                    <p><strong>Word Wise:</strong> Not Enabled</p>
+                    <p><strong>Print length:</strong> 167 pages</p>
+                </div>
+            </ul>
+        </details>
+
+        <details>
+            <summary>
+                Purchase link
+            </summary>
+            <ul>
+                <li><a href="https://www.amazon.com/dp/B01N4FFHMW" target="_blank">Amazon Kindle - ₹223</a></li>
+                <li><a href="https://books.apple.com/" target="_blank">Apple Books - ₹497.17</a></li>
+               
+            </ul>
+        </details>
+
+        <!-- Feedback Form Section -->
+        <section class="feedback-form">
+            <h3>Share Your Feedback</h3>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="rating">Rating:</label>
+                    <select id="rating" name="rating" required>
+                        <option value="">Select a rating</option>
+                        <option value="5">5 - Excellent</option>
+                        <option value="4">4 - Very Good</option>
+                        <option value="3">3 - Good</option>
+                        <option value="2">2 - Fair</option>
+                        <option value="1">1 - Poor</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="feedback">Your Review:</label>
+                    <textarea id="feedback" name="feedback" required placeholder="Share your thoughts about the book..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="purchase">Where did you purchase this book?</label>
+                    <select id="purchase" name="purchase">
+                        <option value="">Select an option</option>
+                        <option value="amazon">Amazon</option>
+                        <option value="apple">Apple Books</option>
+                       
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="submit-btn">Submit Feedback</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Book Showcase. All rights reserved.</p>
+    </footer>
+</body>
+</html>
